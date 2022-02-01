@@ -1,0 +1,96 @@
+Git
+------------
+What is a git?
+-> A git is actually a version control system.
+-> Basically used to store the project's files.
+
+There are three main topics that we concentrate commonly while using the Git:
+-> History
+-> Collaboration
+-> Feature branches
+
+We will discuss them in brief:
+History:
+-> It is making note of all the changes that is been made and committed.
+-> This feeature of git will provide us to track:
+   -> the date of update
+   -> the time the files updated
+   -> which files and lines are been updated
+Collaboration:
+-> Helps the work to be parallely done
+-> Here this is a feature that helps making people to work with the same repo so that no need of 
+   missing any updates while the works are been divided and are to be updated by individuals.
+-> It creates a productive environment
+-> Helps in merging updates from each of the members automatically.
+Feature branches:
+-> suppose we need to do two tasks that are not inter-related but have their significance as a whole.
+-> We are provided with the feature branch concept where we create two seperate branches for each of tasks
+-> once the tasks are completed then we merge the branches so that the whole task is completed efficiently and in 
+   parallel.
+
+Terminologies in Git:
+-> Repository(repo) : A place where the history of the project, project files are stored
+-> Working directory : Basically is the project directory on the system
+-> Staging : making ready before commiting, ex: selecting only few files among the edited once to commit
+-> Commit : It is like saving the changes, without this the changes won't be done on the repository
+
+Initial commands to setup git on system:
+git config --global user.name "YOUR_USER_NAME"
+git config --global user.email "YOUR_EMAIL"
+
+-> Then navigate to the folder you have work with and type the command: git init
+-> some commands used are:
+   -> git add -A (or) git add .
+   -> git status
+   -> git commit -m "What changes done"
+   -> git checkout -- . (retrives the older committed files and their content)
+   -> git remote add origin "path to repo" 
+   -> git push origin master 
+   -> git pull origin master
+
+Git branches:
+Branches are basically used to make the functionalities independent with each other.
+-> Say for example there are multiple developers who are working on same master branch.
+-> developer 1 will be working on some functionality and which is independent to that of the other functionality of 
+   developer 2
+-> So once the developer 1 has completed functionality he can commit it into master and can create a new branch 
+   that is the copy of the master branch.
+-> Any changes to the master branch does not reflect in the other branch, so that the other operations like testing the 
+   functionalities can be done on the copied branch and it will not be interrupted by other commits for testing
+   the functionality of developer 1.
+-> Mean while the testing is completed the other functionality can be moved on to the other branch and started with testing.
+
+creating the new branch:
+-> Go to the repo
+-> There you will see the branch option which is by default master
+-> Click on the drop down and give the name as you wish to the new branch
+-> Then select the branch of which you need to create the copy.
+-> creating the branch is now completed.
+
+Commands related to branching:
+git branch (lists all he branches created)
+git branch <branch_name> (creates the new branch)
+git checkout <branch_name> (switch to the branch_name specified)
+git checkout -b <branch_name> (switch to the branch_name specified by creating it so that it points to this branch itself)
+git branch -m <old_branch_name> <new_branch_name> (changes the name of the branch)
+
+merging the branches:
+-> if the changes in one branch needs to be updated on the other merging of branch to be done.
+-> Go to github repo
+-> there towards right side of the branch you are in you will see "new pull request"
+-> Then select from where to where you have to merge.
+-> Then click on merge.
+-> The changes are now been updated on the target branch.
+
+command to merge:
+-> first go to the target branch
+-> then type the following command
+git merge master
+
+Git ignore:
+-> if we dont want to commit certain files to the repo then we can ignore it.
+-> we need to create a file named  .gitignore and mention the name of the file or *.extension that is to be ignored being committed.
+
+
+
+
